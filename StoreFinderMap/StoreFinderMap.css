@@ -1,0 +1,40 @@
+.us-c-store-finder-map {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100vh;
+  height: -webkit-fill-available;
+  top: 0;
+  left: 0;
+
+  @media (--mq-md) {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    height: auto;
+  }
+
+  &__canvas {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__close {
+    position: absolute;
+    top: var(--space2);
+    right: var(--space2);
+    z-index: 2;
+
+    @media (--mq-md) {
+      display: none !important;
+    }
+  }
+
+  /* allow no alt tag in map */
+  img {
+    filter: none !important;
+  }
+}

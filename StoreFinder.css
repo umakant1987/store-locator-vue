@@ -1,0 +1,94 @@
+.us-c-store-finder {
+  position: relative;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-color: var(--color-black);
+  background-image: url(../../assets/images/store-finder-map__us-ny--sm.webp);
+  color: var(--color-white);
+  overflow: hidden;
+
+  @media (--mq-md) {
+    background-image: url(../../assets/images/store-finder-map__us-ny--lg.webp);
+    height: 65vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (--mq-ie11) {
+    background-image: url(../../assets/images/store-finder-map__us-ny--lg.jpg);
+    display: block;
+  }
+
+  &.is-active {
+    background: var(--color-white);
+  }
+
+  .no-js & {
+    display: none;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  }
+
+  &.is-active::after {
+    display: none;
+  }
+
+  &__start {
+    text-align: center;
+    padding-top: var(--space5);
+    padding-bottom: var(--space5);
+    position: relative;
+    z-index: 2;
+    flex: 1;
+
+    @media (--mq-md) {
+      padding-top: var(--space6);
+      padding-bottom: var(--space6);
+    }
+
+    @media (--mq-lg) {
+      padding-top: var(--space7);
+      padding-bottom: var(--space7);
+    }
+
+    &__inner {
+      display: inline-block;
+    }
+
+    &__input {
+      padding: var(--space1) 0 var(--space4);
+    }
+
+    &__search-title {
+      margin-bottom: var(--space2);
+    }
+  }
+
+  &__locations {
+    @media (--mq-md) {
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    &__inner {
+      position: relative;
+      height: 100%;
+    }
+  }
+}

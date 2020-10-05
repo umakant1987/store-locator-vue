@@ -1,0 +1,62 @@
+.us-c-store-finder-map-marker {
+  color: var(--color-black);
+  padding: var(--space1);
+  width: 200px;
+  font-weight: inherit;
+  font-family: var(--font-sans-serif);
+
+  @media (--mq-md) {
+    width: 300px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin: 0 0 var(--space2);
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    line-height: 1;
+  }
+
+  &__distance {
+    text-align: right;
+    color: var(--color-dark-grey);
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  &__details {
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  &__address {
+    span + span {
+      &::before {
+        content: ', ';
+      }
+    }
+  }
+
+  &__phone {
+    margin-top: var(--space2);
+  }
+
+  &__directions {
+    margin-top: var(--space3);
+
+    &__link {
+      display: inline-block;
+    }
+
+    &__icon {
+      width: 15px;
+      height: 15px;
+      vertical-align: -2px;
+    }
+  }
+}

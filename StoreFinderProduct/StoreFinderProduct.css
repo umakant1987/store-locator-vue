@@ -1,0 +1,29 @@
+.us-c-store-finder-product {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space2);
+  width: 100%;
+  margin-bottom: var(--space1);
+
+  @media (--mq-md) {
+    max-width: 400px;
+  }
+
+  &__image {
+    width: 50px;
+    margin-right: var(--space2);
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: calc(var(--baseline) * 4);
+    font-family: var(--font-sans-serif-bold);
+    text-transform: uppercase;
+  }
+}

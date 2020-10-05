@@ -1,0 +1,80 @@
+.us-c-store-finder-input {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (--mq-md) {
+    max-width: 400px;
+  }
+
+  &__locate {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    padding-right: 4px;
+    border-right: 1px solid var(--color-light-grey);
+
+    &__action {
+      background: transparent;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      appearance: none;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    &__icon {
+      position: relative;
+      top: 1px;
+    }
+
+    &.is-loading &__action {
+      display: none;
+    }
+
+    &.is-loading::before {
+      content: '';
+      display: block;
+      background: var(--color-black);
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+      margin-top: 1px;
+      height: 10px;
+      width: 10px;
+      transform: scale(1);
+      animation: pulse-loader 1s infinite;
+    }
+
+    @keyframes pulse-loader {
+      0% {
+        transform: scale(0.7);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+      }
+      100% {
+        transform: scale(0.7);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    width: 100%;
+  }
+
+  &__input {
+    padding-left: 50px;
+    flex: 1;
+  }
+}
